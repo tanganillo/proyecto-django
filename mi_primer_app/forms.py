@@ -1,5 +1,5 @@
 from django import forms
-
+from .models import Auto
 
 class CursoForm(forms.Form):
     nombre = forms.CharField()
@@ -19,3 +19,10 @@ class EstudianteForm(forms.Form):
     edad = forms.IntegerField(min_value=10, max_value=100)
     fecha_inscripcion = forms.DateField(
         widget=forms.DateInput(attrs={'type': 'date'}))
+    
+
+
+class AutoForm(forms.ModelForm):
+    class Meta:
+        model = Auto
+        fields = ['modelo', 'marca', 'descripcion']
