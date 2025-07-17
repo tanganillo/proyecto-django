@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mi_primer_app',  
+    'mi_primer_app',  # Añadimos nuestra aplicación personalizada
+    'usuarios',  # Añadimos la aplicación de usuarios
 ]
 
 MIDDLEWARE = [
